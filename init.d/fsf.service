@@ -8,9 +8,9 @@ User=fsf
 Group=fsf
 WorkingDirectory=/
 PIDFile=/data/fsf/fsf.pid
-ExecStart=/opt/fsf/fsf_server/main.py start
-ExecStop=/opt/fsf/fsf_server/main.py stop
-ExecReload=/opt/fsf/fsf_server/main.py restart
+ExecStart=/opt/fsf/fsf-server/main.py start
+ExecStop=/opt/fsf/fsf-server/main.py stop
+ExecReload=/opt/fsf/fsf-server/main.py restart
 #StandardOutput=syslog
 #StandardError=syslog
 
