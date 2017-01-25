@@ -37,5 +37,5 @@ fi
 #if [ ! -e $FSF_SRCDIR/fsf_server/main.py ]; then ln -s $FSF_SRCDIR/fsf_server/main.py /usr/bin/fsfserver
 #fi 
 
-if [ ! -e $FSF_SRCDIR/fsf_client/fsf_client.py ]; then ln -s $FSF_SRCDIR/fsf_client/fsf_client.py /usr/bin/fsfclient
+if [ ! -e /usr/bin/fsfclient ]; then ln -s $FSF_SRCDIR/fsf-client/fsf_client.py /usr/bin/fsfclient
 fi
