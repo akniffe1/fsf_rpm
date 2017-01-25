@@ -1,0 +1,19 @@
+[Unit]
+Description=File Scanning Framework Service
+After=syslog.target network.target 
+
+[Service]
+Type=simple
+User=fsf
+Group=fsf
+WorkingDirectory=/
+PIDFile=/data/fsf/fsf.pid
+ExecStart=/opt/fsf/fsf_server/main.py start
+ExecStop=/opt/fsf/fsf_server/main.py stop
+ExecReload=/opt/fsf/fsf_server/main.py restart
+#StandardOutput=syslog
+#StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+
