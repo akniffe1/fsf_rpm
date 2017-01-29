@@ -134,7 +134,7 @@ def main():
    with open(daemon_logger, 'a') as fh:
       fh.write('%s Daemon given %s command\n' % (dt.now(), sys.argv[1]))
 
-   daemon = ScannerDaemon('/data/fsf/fsf.pid', stdin=daemon_logger, stdout=daemon_logger, stderr=daemon_logger)
+   daemon = ScannerDaemon('/run/fsf/fsf.pid', stdin=daemon_logger, stdout=daemon_logger, stderr=daemon_logger)
 
    if 'start' == sys.argv[1]:
       daemon.start()
