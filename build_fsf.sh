@@ -13,7 +13,8 @@
 -d "python-pypdf2" \
 -d "python-ssdeep" \
 -d "python-requests" \
--d "python-pyasn1-modules" \
+-d "python2-pyasn1" \
+-d "python2-pyasn1-modules" \
 -d "python-pyelftools" \
 -d "python-rarfile" \
 -d "python-xmltodict" \
