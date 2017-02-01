@@ -26,9 +26,13 @@ fi
 # set permissions on the $FSF_SRCDIR
 chown -R fsf $FSF_SRCDIR
 
-# symlink the server start and client
-#if [ ! -e $FSF_SRCDIR/fsf_server/main.py ]; then ln -s $FSF_SRCDIR/fsf_server/main.py /usr/bin/fsfserver
-#fi 
+# set proper file attribute on systemd file
+if [ -e /etc/systemd/system/fsf.service ]; then chmod 644 /etc/systemd/system/fsf.service
+fi
 
-if [ ! -e /usr/bin/fsfclient ]; then ln -s $FSF_SRCDIR/fsf-client/fsf_client.py /usr/bin/fsfclient
+# symlink the server start and client
+if [ ! -e /usr/local/bin/fsfserver ]; then ln -s $FSF_SRCDIR/fsf-server/main.py /usr/local/bin/fsfserver
+fi 
+
+if [ ! -e /usr/local/bin/fsfclient ]; then ln -s $FSF_SRCDIR/fsf-client/fsf_client.py /usr/local/bin/fsfclient
 fi
