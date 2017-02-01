@@ -1,4 +1,4 @@
-/usr/local/share/gems/gems/fpm-1.8.0/bin/fpm -s dir -t rpm -n fsfserver -v 1 --iteration 1 \
+fpm -s dir -t rpm -n fsfserver -v 1 --iteration 1 \
 -d "python-concurrentloghandler" \
 -d "python-czipfile" \
 -d "python-hachoir-core" \
@@ -37,6 +37,7 @@
 --rpm-use-file-permissions \
 --rpm-user fsf \
 --rpm-group fsf \
---post-install ./post-install.sh \
+--before-install ./pre-install.sh \
+--after-install ./post-install.sh \
 ./yara/=/var/lib/yara-rules/ ./fsf/=/opt/fsf ./init.d/fsf.service=/etc/systemd/system/fsf.service
 
