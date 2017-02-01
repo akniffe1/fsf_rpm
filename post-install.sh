@@ -23,6 +23,9 @@ fi
 if [ ! -d $FSF_ARCHIVEDIR ]; then mkdir -m 644 $FSF_ARCHIVEDIR && chown -R fsf $FSF_ARCHIVEDIR
 fi
 
+# set permissions on the $FSF_SRCDIR
+chown -R fsf $FSF_SRCDIR
+
 # symlink the server start and client
 #if [ ! -e $FSF_SRCDIR/fsf_server/main.py ]; then ln -s $FSF_SRCDIR/fsf_server/main.py /usr/bin/fsfserver
 #fi 

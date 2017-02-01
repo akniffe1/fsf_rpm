@@ -35,8 +35,6 @@ fpm -s dir -t rpm -n fsfserver -v 1 --iteration 1 \
 -d "cabextract" \
 -d "yara == 3.4.0" \
 --rpm-use-file-permissions \
---rpm-user fsf \
---rpm-group fsf \
 --before-install ./pre-install.sh \
 --after-install ./post-install.sh \
 ./yara/=/var/lib/yara-rules/ ./fsf/=/opt/fsf ./init.d/fsf.service=/etc/systemd/system/fsf.service
