@@ -1,4 +1,5 @@
 #! /usr/bin/bash
 # 
 # Add fsf user
-useradd -M fsf
+if ! id "fsf" >/dev/null 2>&1; then useradd -M fsf
+fi
