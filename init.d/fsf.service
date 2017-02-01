@@ -1,6 +1,6 @@
 [Unit]
-Description=File Scanning Framework Service
-After=syslog.target network.target 
+Description=File Scanning Framework (FSF-Server) Service
+After=network.target 
 
 [Service]
 Type=simple

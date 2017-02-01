@@ -26,12 +26,20 @@ fi
 if ! [[ $(grep 'yara-rules/rules' $INDEXFILE) = *yara-rules/rules* ]]; then
 # Add the header
   sed -i -e "\$a\/\/yara-rules/rules" $INDEXFILE
+  # add the rules we care about
+  for RULE in ${RULESTODEPLOY[@]}; do
+    sed -i -e "\$ainclude\ \"$REPORULEDIR$RULE\"" $INDEXFILE
+  done 
 fi
-# add the rules we care about
-for RULE in ${RULESTODEPLOY[@]}; do
-#  echo $RULE
-  if ! [[ $(grep $RULE $INDEXFILE) = *$RULE* ]]; then 
-    sed -i -e "\$ainclude\ \"$REPORULEDIR\/$RULE\"" $INDEXFILE
-  fi
-done
+
+
+
+
+
+
+
+
+
+
+
 
