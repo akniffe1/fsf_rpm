@@ -4,6 +4,7 @@ FSF_LOGDIR=/var/lib/fsf
 FSF_ARCHIVEDIR=/var/lib/fsf/archive
 YARA_RULEDIR=/var/lib/yara-rules
 FSF_SRCDIR=/opt/fsf
+FSF_RUNDIR=/run/fsf
 
 
 # set up $YARA_RULEDIR
@@ -18,6 +19,10 @@ fi
 # set up $FSF_ARCHIVEDIR
 
 if [ ! -d $FSF_ARCHIVEDIR ]; then mkdir -p -m 755 $FSF_ARCHIVEDIR && chown -R fsf:fsf $FSF_ARCHIVEDIR
+fi
+
+# Create run dir for pid
+if [ ! -d $FSF_RUNDIR ]; then mkdir -p -m 755 $FSF_RUNDIR && chown -R fsf:fsf $FSF_RUNDIR
 fi
 
 # set permissions on the $FSF_SRCDIR
