@@ -26,7 +26,7 @@ SOURCES/$(SOURCE0): SPECS/$(NAME).spec
 
 sources: SOURCES/$(SOURCE0)
 	
-SRPMS/%.src.rpm: SOURCES/$(SOURCE) SPECS/$(NAME).spec
+SRPMS/%.src.rpm: SOURCES/$(SOURCE0) SPECS/$(NAME).spec
 	rpmbuild -bs --nodeps \
 		--define "_sourcedir $(PWD)/SOURCES" \
 		--define "_srcrpmdir $(PWD)/SRPMS" \
