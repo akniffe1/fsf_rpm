@@ -10,4 +10,4 @@ SERVER_CONFIG = { 'IP_ADDRESS' : ['localhost',],
                   'PORT' : 5800 }
 
 # Full path to debug file if run with --suppress-report
-CLIENT_CONFIG = { 'LOG_FILE' : '/data/fsf/client_dbg.log' }
+CLIENT_CONFIG = { 'LOG_FILE' : '/var/lib/fsf/client_dbg.log' }

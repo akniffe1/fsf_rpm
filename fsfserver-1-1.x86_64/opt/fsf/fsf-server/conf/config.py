@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #
 # Basic configuration attributes for scanner. Used as default
-# unless the user overrides them. 
+# unless the user overrides them.
 #
 
 SCANNER_CONFIG = { 'LOG_PATH' : '/var/lib/fsf/logs',

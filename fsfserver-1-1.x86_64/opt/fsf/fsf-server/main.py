@@ -76,7 +76,7 @@ class ForkingTCPRequestHandler(SocketServer.BaseRequestHandler):
 
          self.request.settimeout(None)
          self.process_data(data, s)
-   
+
       except:
          e = sys.exc_info()
          s.dbg_h.error('%s There was a problem processing the connection request from %s. Error: %s' % (dt.now(), self.request.getpeername()[0], e))
